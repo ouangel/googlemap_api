@@ -51,8 +51,12 @@ width: 30vw;
 }
 
 #user_input {
-	/*margin-top: 30%;*/
-	/*display: none;*/
+	margin-top: 20%;
+	display: none;
+}
+
+.user {
+	margin-top: 18%;
 }
 
 #owner h3,

@@ -53,7 +53,7 @@ function initMap(){
           lng: longitude
         },
         success:function(resp){
-          alert(resp);
+          alert("Your info has been submitted");
         }
       }) // end ajax
     } // end if(place) statement
@@ -121,8 +121,12 @@ window.fbAsyncInit = function() {
 
   var login = document.getElementById('login');
   var logout = document.getElementById('logout');
+  var user_in = document.getElementById("user_input");
 
   login.onclick = function(){
+
+    user_in.style.display = 'block';
+    login.style.display = 'none';
 
     FB.login(function(resp) {
       console.log(resp);
@@ -145,8 +149,11 @@ window.fbAsyncInit = function() {
     FB.logout(function(response){
   });
 
-  alert("You are logged out");
-  location.relaod();
+    user_in.style.display = "none";
+    login.style.display = "block";
+
+    // alert("You are logged out");
+    // location.relaod();
   };
 
 }; // end window fb function
