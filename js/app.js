@@ -53,10 +53,23 @@ function initMap(){
           lng: longitude
         },
         success:function(resp){
-          alert("Your info has been submitted");
+          alert("Your info has submitted");
         }
       }) // end ajax
     } // end if(place) statement
+
+    // clear form fields after car owner submit the form
+    var locaton = document.getElementById("add");
+    var carimg = document.getElementById("carimg");
+    var des = document.getElementById("description");
+    var time = document.getElementById("time");
+    var phone = document.getElementById("phone");
+
+    locaton.value = "";
+    carimg.value = "";
+    des.value = "";
+    time.value = "";
+    phone.value = "";
   } // end onclick function
 } // end initmap function
 
